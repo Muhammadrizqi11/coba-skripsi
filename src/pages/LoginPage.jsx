@@ -1,50 +1,68 @@
-import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Form, FormGroup, FormLabel, FormControl, FormCheck, FormText, Button } from "react-bootstrap";
-import { createRoutesFromElements } from "react-router-dom";
+import React, { useState } from "react";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const LoginPage = () => {
-  const [showNavbar, setShowNavbar] = useState(false);
-  const [showFooter, setShowFooter] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [msg, setMsg] = useState("");
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    // Set showNavbar dan showFooter menjadi true saat komponen LoginPage di-mount
-    setShowNavbar(false);
-    setShowFooter(false);
-  }, []);
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post("http://localhost:5000/login", {
+        email,
+        password,
+      });
+      localStorage.setItem("accessToken", response.data.accessToken);
+      navigate("/");
+    } catch (error) {
+      if (error.response) {
+        setMsg(error.response.data.msg);
+      } else {
+        setMsg("Tidak dapat terhubung ke server.");
+      }
+    }
+  };
+
   return (
     <div className="body-login">
       <div className="login">
-        <Container className="container-loginpage mt-5">
+        <Container className="container-loginpage">
           <Row>
             <Col>
               <h2 className="text-center mb-2 fw-bold">Studiobook</h2>
             </Col>
           </Row>
-
           <Row className="row-cols-lg-2 row cols-1">
             <Col>
-              <Form>
+              <Form onSubmit={handleLogin}>
                 <Form.Group controlId="formBasicEmail">
                   <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" placeholder="Username" />
+                  <Form.Control type="email" placeholder="Username" value={email} onChange={(e) => setEmail(e.target.value)} />
                   <Form.Text className="text-muted">We'll never share your email with anyone else.</Form.Text>
                 </Form.Group>
-
                 <Form.Group controlId="formBasicPassword">
                   <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" placeholder="**********" />
+                  <Form.Control type="password" placeholder="**********" value={password} onChange={(e) => setPassword(e.target.value)} />
                 </Form.Group>
+                <Button variant="primary" type="submit" className="btn-loginpage btn btn-dark rounded-1 me-2 mb-xs-0 mb-2 mt-4 text-center align-item-center">
+                  Login
+                </Button>
               </Form>
+              {msg && <p>{msg}</p>}
             </Col>
             <Col>
-              <img src="src\assets\img\gopro.png" alt="GoPro" className="text-center mb-2" />
+              <img src="src/assets/img/gopro.png" alt="GoPro" className="text-center mb-2" />
             </Col>
           </Row>
           <Row>
-            <Col>
-              <Button variant="primary" type="submit" className="btn-loginpage btn btn-dark -btn-lg rounded-1 me-2 mb-xs-0 mb-2 mt-4 text-center align-item-center">
-                Login
-              </Button>
+            <Col className="text-center pt-2">
+              <a href="/loginfor" className=" text-black">
+                Belum mempunyai akun?
+              </a>
             </Col>
           </Row>
         </Container>

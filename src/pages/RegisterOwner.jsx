@@ -3,15 +3,16 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const RegisterPage = () => {
+const RegisterOwnerPage = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confPassword, setConfPassword] = useState("");
+  const [instagram, setInstagram] = useState("");
   const [msg, setMsg] = useState("");
   const navigate = useNavigate();
 
-  const Register = async (e) => {
+  const RegisterOwner = async (e) => {
     e.preventDefault();
     try {
       const response = await axios.post("http://localhost:5000/users", {
@@ -19,6 +20,8 @@ const RegisterPage = () => {
         email,
         password,
         confPassword,
+        role: "OWNER",
+        instagram,
       });
       setMsg(response.data.msg);
       navigate("/login");
@@ -44,14 +47,14 @@ const RegisterPage = () => {
 
           <Row className="row-cols-lg-2 row cols-1">
             <Col>
-              <Form onSubmit={Register}>
+              <Form onSubmit={RegisterOwner}>
                 <Form.Group controlId="formBasicName">
                   <Form.Label>Name</Form.Label>
                   <Form.Control type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
                 </Form.Group>
                 <Form.Group controlId="formBasicEmail">
                   <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" placeholder="Username" value={email} onChange={(e) => setEmail(e.target.value)} />
+                  <Form.Control type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
                   <Form.Text className="text-muted">We'll never share your email with anyone else.</Form.Text>
                 </Form.Group>
 
@@ -62,6 +65,10 @@ const RegisterPage = () => {
                 <Form.Group controlId="formBasicConfPassword">
                   <Form.Label>Conf Password</Form.Label>
                   <Form.Control type="password" placeholder="**********" value={confPassword} onChange={(e) => setConfPassword(e.target.value)} />
+                </Form.Group>
+                <Form.Group controlId="formBasicInstagram">
+                  <Form.Label>Instagram</Form.Label>
+                  <Form.Control type="text" placeholder="Instagram" value={instagram} onChange={(e) => setInstagram(e.target.value)} />
                 </Form.Group>
                 <Button variant="primary" type="submit" className="btn-loginpage btn btn-dark btn-lg rounded-1 me-2 mb-xs-0 mb-2 mt-4 text-center align-item-center">
                   Register
@@ -85,4 +92,4 @@ const RegisterPage = () => {
   );
 };
 
-export default RegisterPage;
+export default RegisterOwnerPage;

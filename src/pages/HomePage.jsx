@@ -34,7 +34,7 @@ const HomePage = () => {
               <button className="btn btn-dark -btn-lg rounded-1 me-2 mb-xs-0 mb-2 animate__animated animate__fadeInLeft animate__delay-1s" onClick={() => navigate("/fotografer")}>
                 Lihat Fotografer
               </button>
-              <button className="btn btn-outline-dark -btn-lg rounded-1 mb-xs-0 mb-2 animate__animated animate__fadeInLeft animate__delay-1s">Lihat Promo</button>
+              <button className="btn btn-outline-dark -btn-lg rounded-1 mb-xs-0 mb-2 animate__animated animate__fadeInLeft animate__delay-1s">Lihat Jasa Foto</button>
             </Col>
             <Col lg="6" className="pt-lg-0 pt5">
               <img src={HeroImage} alt="hero-img" className="animate__animated animate__fadeInRight animate__delay-1s" />
@@ -53,7 +53,7 @@ const HomePage = () => {
           <Row>
             {kelasTerbaru.map((kelas) => {
               return (
-                <Col key={kelas.id} className="border border-dark shadow rounded" data-aos="fade-up" data-aos-duration="1100" data-aos-delay={kelas.delay}>
+                <Col key={kelas.id} className="border border-dark shadow rounded" data-aos="fade-up" data-aos-duration="1100" data-aos-delay={kelas.delay} onClick={() => navigate("/detailproduct")}>
                   <img src={kelas.image} alt="unsplash.com" className="w-100 mb-5 rounded-top" />
                   <div className="star mb-2 px-3">
                     <i className={kelas.star1}></i>

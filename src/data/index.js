@@ -21,7 +21,7 @@ export const navLinks = [
   {
     id: 2,
     path: "fotografer",
-    text: "Fotografer",
+    text: "Booking",
   },
   {
     id: 3,
@@ -30,8 +30,8 @@ export const navLinks = [
   },
   {
     id: 4,
-    path: "faq",
-    text: "FAQ",
+    path: "riwayatpemesanan",
+    text: "Riwayat Pemesanan",
   },
   {
     id: 5,
@@ -359,49 +359,49 @@ export const faq = [
   {
     id: 1,
     eventKey: 0,
-    title: "Apakah ini Berlangganan?",
+    title: "Bagaimana proses pemesanan dan pembayaran?",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
   },
   {
     id: 2,
     eventKey: 1,
-    title: "Bagaimana Sistem Belajarnya?",
+    title: "Berapa lama waktu yang akan saya dapatkan untuk sesi foto?",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
   },
   {
     id: 3,
     eventKey: 2,
-    title: "Apakah Boleh di Share ke Orang Lain?",
+    title: "Apakah studio menyediakan layanan makeup artist atau stylist?",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
   },
   {
     id: 4,
     eventKey: 3,
-    title: "Apakah Ada Grup Diskusi?",
+    title: "Apakah ada opsi untuk melakukan sesi foto di luar studio, misalnya di lokasi tertentu?",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
   },
   {
     id: 5,
     eventKey: 4,
-    title: "Apakah dapat di Akses Selamanya?",
+    title: "Berapa lama waktu yang dibutuhkan untuk proses editing dan pengiriman foto-foto final?",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
   },
   {
     id: 6,
     eventKey: 5,
-    title: "Apakah ada Mentornya?",
+    title: "Apakah fotografer/staf studio akan membantu saya dalam memilih pose dan gaya foto yang sesuai?",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
   },
   {
     id: 7,
     eventKey: 6,
-    title: "Apakah Saya Boleh Mendownload Videonya?",
+    title: "Apakah ada kebijakan pembatalan atau perubahan jadwal?",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
   },
   {
     id: 8,
     eventKey: 7,
-    title: "Apakah boleh ganti Kelas ketika sudah Membeli?",
+    title: "Apakah saya bisa membawa properti atau perlengkapan tambahan untuk digunakan dalam sesi foto?",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
   },
 ];
